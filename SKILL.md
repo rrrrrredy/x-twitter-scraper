@@ -1,10 +1,11 @@
 ---
 name: x-twitter-scraper
+version: 1.0.0
 description: "X/Twitter public data scraper without login. Supports user profile, recent timeline (≤20 tweets), and full tweet content (including Note Tweet long-form). Triggers: check Twitter user, view tweets, scrape X profile, search X. Not for: full history timeline (>20 tweets) or advanced search (requires login)."
 tags: [twitter, x, scraping, social-media]
 ---
 
-# X/Twitter 无登录数据抓取 V1
+# x-twitter-scraper 1.0.0
 
 ## 首次使用
 
@@ -104,10 +105,7 @@ bash scripts/setup.sh
 
 ---
 
-## Gotchas
+## Changelog
 
-⚠️ **Guest token 有效期不固定** → 通常几小时，但可能随时失效。脚本会自动重新获取。
-⚠️ **GraphQL query ID 会变** → X 更新后 endpoint ID 可能失效，运行 `setup.sh` 重新生成。
-⚠️ **Timeline 只返回部分推文** → Guest token 下 UserTweets API 不返回全量，通常 ≤20 条。
-⚠️ **搜索功能受限** → Guest token 下搜索 API 返回结果有限，需要登录态才能完整搜索。
-⚠️ **必须走代理** → 沙箱直连 X API 超时，必须配置 HTTP 代理。
+### 1.0.0
+- Initial release. Guest token approach for scraping public X/Twitter data without login.
