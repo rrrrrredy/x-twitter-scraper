@@ -57,7 +57,8 @@ x-twitter-scraper/
 ├── scripts/
 │   ├── setup.sh          # Dependency setup & query ID extraction
 │   └── x_scraper.py      # Main scraper CLI tool
-├── references/           # Reference documentation
+├── references/
+│   └── .gitkeep
 └── .gitignore
 ```
 
