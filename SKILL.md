@@ -101,3 +101,13 @@ bash scripts/setup.sh
 3. 必须走上游代理（沙箱直连超时）
 
 依赖：`httpx`（`pip install httpx`）
+
+---
+
+## Gotchas
+
+⚠️ **Guest token 有效期不固定** → 通常几小时，但可能随时失效。脚本会自动重新获取。
+⚠️ **GraphQL query ID 会变** → X 更新后 endpoint ID 可能失效，运行 `setup.sh` 重新生成。
+⚠️ **Timeline 只返回部分推文** → Guest token 下 UserTweets API 不返回全量，通常 ≤20 条。
+⚠️ **搜索功能受限** → Guest token 下搜索 API 返回结果有限，需要登录态才能完整搜索。
+⚠️ **必须走代理** → 沙箱直连 X API 超时，必须配置 HTTP 代理。
